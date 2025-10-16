@@ -7,7 +7,6 @@
 extern crate alloc;
 
 use blog_os::println;
-use blog_os::task::{Task, executor::Executor, keyboard};
 use bootloader::{BootInfo, entry_point};
 use core::panic::PanicInfo;
 
@@ -30,10 +29,9 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {
     #[cfg(test)]
     test_main();
 
-    let mut executor = Executor::new();
-    executor.spawn(Task::new(example_task()));
-    executor.spawn(Task::new(keyboard::print_keypresses()));
-    executor.run();
+    loop {
+        
+    }
 }
 
 /// This function is called on panic.
