@@ -1,0 +1,14 @@
+{
+  "llvm-target": "aarch64-unknown-none",
+  "target-endian": "little",
+  "target-pointer-width": "64",
+  "arch": "aarch64",
+  "os": "none",
+  "vendor": "unknown",
+  "linker-flavor": "ld.lld",
+  "linker": "/opt/homebrew/opt/llvm/bin/ld.lld",
+  "panic-strategy": "abort",
+  "disable-redzone": true,
+  "features": "+strict-align",
+  "executables": true
+}
